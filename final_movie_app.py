@@ -60,7 +60,7 @@ def recommend_movies(user_ratings):
     new_user_df_length = len(new_user_df) * -1
     
     # Sample approximately 40% of the user IDs
-    sample_ids = ratings['userId'].drop_duplicates().sample(frac=0.4)
+    sample_ids = ratings['userId'].drop_duplicates().sample(frac=0.1)
     
     # Filter the ratings DataFrame for sampled user IDs
     ratings_sampled = ratings[ratings['userId'].isin(sample_ids)]
@@ -203,7 +203,11 @@ def main():
             for mid, rating in st.session_state.ratings.items() if rating > 0
         ]
 
-        recommended_movies = recommend_movies(user_ratings)
+        try:
+            recommended_movies = recommend_movies(user_ratings)
+        except:
+            st.error("Too intense.")
+            return
 
         # if user_ratings:
         #     new_user_df = pd.DataFrame(user_ratings)
