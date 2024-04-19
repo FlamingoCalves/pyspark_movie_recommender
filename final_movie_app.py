@@ -97,7 +97,7 @@ def recommend_movies(user_ratings):
     return recommended_movies_with_titles
 
 def main():
-    st.title("Movie Recommendation System")
+    st.title("ML Movie Recommendation System")
 
     if 'movies' not in st.session_state:
         st.session_state.movies = load_movies()
