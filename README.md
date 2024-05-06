@@ -1,4 +1,4 @@
-# Movie Recommendation System (+ Pyspark Implentation)
+# Movie Recommendation System (+ Pyspark Implementation)
 
 This repository contains code for a movie recommendation system implemented in two versions: one using Pandas and another using PySpark. This project is designed to demonstrate the application of Python and PySpark in data processing and machine learning for movie recommendations. It combines backend logic with a touch of front-end development using Streamlit, and it is available on Streamlit sharing.
 
